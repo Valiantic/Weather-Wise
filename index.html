@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Wise</title>
+    <meta name="title" content="weatherio">
+
+
+    <!--favicon icon-->
+    <link rel="shortcut icon" href="/assets/images/weather_icons/02d.png" type="image/svg+xml">
+
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+     <!--css shitz-->
+     <link rel="stylesheet" href="assets/css/style.css">
+
+      <!--js shitz-->
+      <script src="assets/js/app.js" type="module"></script>
+      <script src="assets/js/route.js" type="module"></script>
+
+</head>
+<body>
+    <!--header-->
+<header class="header">
+ <div class="container">
+     <a href="#" class="logo">
+        <img src="./assets/images/logos.png" width="204" height="24" alt="logo">
+     </a>
+
+
+     <!--Search View Manual Activation-->
+     <div class="search-view" data-search-view>
+
+        <div class="search-wrapper">
+          <input type="search" name="search" placeholder="Search city ..."
+          autocomplete="off" class="search-field" data-search-field>
+
+          <span class="m-icon leading-icon">search</span>
+        
+          <button class="icon-btn leading-icon has-state" aria-label="close search"
+          data-search-toggler>
+                 <span class="m-icon">arrow_back</span>
+          </button>
+        </div>
+
+         <div class="search-result" data-search-result></div>
+
+     </div>
+
+     <div class="header-actions">
+        <button class="icon-btn has-state" 
+        aria-label="open search" data-search-toggler>
+         <span class="m-icon icon">search</span>
+        </button>
+
+      <a href="#/current-location" class="btn-primary has-state" data-current-location-btn>
+        <span class="m-icon">my_location</span>
+
+        <span class="span">Weather on my Location</span>
+      </a>
+
+     </div>
+ </div>
+</header>
+
+
+<main>
+  <article class="container" data-container>
+    <div class="content-left">
+ <!--current weather-->
+      <section class="section current-weather" aria-label="current-weather" data-current-weather></section>
+
+<!--forecast-->
+      <section class="section forecast" aria-labelledby="forecast-label"
+      data-5-day-forecast>
+         <h2 class="title-2" id="forecast-label">5 Days Forecast</h2>
+      
+         <div class="card card-lg forecast-card">
+          <ul>
+
+          <li class="card-item">
+
+               <div class="icon-wrapper">
+                <img src="./assets/images/weather_icons/01n.png"
+                width="36" height="36" alt="Overcast Clouds" class="weather-icon">
+              
+                <span class="span">
+                    <p class="title-2">25</p>
+                </span> 
+              </div>
+
+             <p class="label-1">17 Feb</p>
+
+             <p class="label-1">Friday</p>
+
+          </li>
+
+          <li class="card-item">
+
+              <div class="icon-wrapper">
+               <img src="./assets/images/weather_icons/01n.png"
+               width="36" height="36" alt="Overcast Clouds" class="weather_icon">
+             
+               <span class="span">
+                   <p class="title-2">25</p>
+               </span> 
+             </div>
+
+            <p class="label-1">17 Feb</p>
+
+            <p class="label-1">Friday</p>
+
+          </li>
+
+          <li class="card-item">
+
+            <div class="icon-wrapper">
+             <img src="./assets/images/weather_icons/01n.png"
+             width="36" height="36" alt="Overcast Clouds" class="weather_icon">
+           
+             <span class="span">
+                 <p class="title-2">25</p>
+             </span> 
+           </div>
+
+          <p class="label-1">17 Feb</p>
+
+          <p class="label-1">Friday</p>
+
+          </li>
+
+          <li class="card-item">
+
+          <div class="icon-wrapper">
+           <img src="./assets/images/weather_icons/01n.png"
+           width="36" height="36" alt="Overcast Clouds" class="weather_icon">
+         
+           <span class="span">
+               <p class="title-2">25</p>
+           </span> 
+         </div>
+
+        <p class="label-1">17 Feb</p>
+
+        <p class="label-1">Friday</p>
+
+          </li>
+
+          <li class="card-item">
+
+            <div class="icon-wrapper">
+             <img src="./assets/images/weather_icons/01n.png"
+             width="36" height="36" alt="Overcast Clouds" class="weather_icon">
+           
+             <span class="span">
+                 <p class="title-2">25</p>
+             </span> 
+           </div>
+
+          <p class="label-1">17 Feb</p>
+
+          <p class="label-1">Friday</p>
+
+         </li>
+
+          </ul>
+         </div>
+        </section>
+    </div>
+
+
+    <!--hourlights and hourly forecast-->
+   <div class="content-right">
+    <!--highlights-->
+
+    <section class="section highlights" aria-labelledby="highlights-label" 
+    data-highlights></section>
+    
+    <!--
+      hourly forecast
+    -->
+
+   <section class="section hourly-forecast" aria-label="hourly forecast"
+    data-hourly-forecast></section>
+
+<!--footer -->
+
+<footer class="footer">
+  <p class="body-3">
+     Coded by stevendevs. All Rights Reserved.
+  </p>
+
+  <p class="body-3">
+    Powered By <a href="https://openweathermap.org/api" title="Free OpenWeather Api"
+    target="_blank" rel="noopener">
+  <img src="./assets/images/openweather.png" width="150" height="30"
+  loading="lazy" alt="OpenWeather">
+  </a>
+  </p>
+</footer>
+
+   </div>
+
+   <div class="loading" data-loading>
+
+   </div>
+
+
+  </article>
+</main>
+
+<!-- #404 section -->
+
+<section class="error-content" data-error-content>
+
+  <h2 class="heading">404</h2>
+
+  <p class="body-1">Page not Found Dummy!</p>
+
+  <a href="#" class="btn-primary">
+  <span class="span">Go home</span>
+  </a>
+
+</section>
+
+
+<!--1:42:31 OPENWEATHER API TIME-->
+
+</body>
+</html>
