@@ -931,9 +931,11 @@ article.container {
   display: none;
 }
 
-.logo img {
-  width:150px;
-  max-width: 100px;
+.logo{
+   position: absolute;
+  top: 145%;
+  left: 21%;
+ 
 }
 
 /* .logo {
