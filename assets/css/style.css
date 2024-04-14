@@ -933,6 +933,7 @@ article.container {
 
 .logo img {
   width:150px;
+  max-width: 100px;
 }
 
 /* .logo {
